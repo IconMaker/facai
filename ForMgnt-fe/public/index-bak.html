@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title></title>
+<link rel="stylesheet" href="/stylesheets/facai.css" />
+<script src="/javascripts/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+  // 菜单
+  $(".menu-fold, .mask").on("click",function(){
+    $(".bd").toggleClass("show")
+    $(".aside").toggleClass("show")
+    $(".header").toggleClass("show")
+    $(".mask").toggle()
+  })
+})
+</script>
+</head>
+<body class="bd">
+<!-- 侧边菜单 -->
+<div class="aside">
+  <div class="logo">
+    <i></i>
+    <span>创富后台管理系统</span>
+  </div>
+  <div class="avatar">
+    <i style="background-image:url(images/avatar.png)"></i>
+    <span class="online">在线</span>
+  </div>
+  <div class="menu">
+    <h3>菜单</h3>
+    <div>
+      <a href="javascript:;">订单管理</a>
+      <a href="javascript:;" class="curr">商户管理</a>
+      <a href="javascript:;">商户配额</a>
+      <a href="javascript:;">代理管理</a>
+      <a href="javascript:;">统计</a>
+      <a href="javascript:;">提现管理</a>
+      <a href="javascript:;">通道管理</a>
+      <a href="javascript:;">通道池管理</a>
+    </div>
+  </div>
+</div>
+<div class="mask"></div>
+<!-- //侧边菜单 -->
+<div class="container">
+  <!-- header -->
+  <div class="header">
+    <i class="menu-fold"></i>
+  </div>
+  <!-- //header -->
+  <div class="main">
+    <h1 class="title">订单列表 <span>订单列表</span></h1>
+    <div class="f-box">
+      <h2 class="sub-title">订单列表</h2>
+      <!-- 搜索 -->
+      <div class="search-box">
+         
+        <table width="100%">
+          <thead>
+            <tr>
+              <th>
+                <input type="text" class="ipt" placeholder="代理ID">
+              </th>
+              <th>
+                <input type="text" class="ipt" placeholder="商户ID">
+              </th>
+              <th>
+                <input type="text" class="ipt" placeholder="商户号">
+              </th>
+              <th>
+                <input type="text" class="ipt" placeholder="平台订单号">
+              </th>
+              <th>
+                <input type="text" class="ipt" placeholder="商户订单号">
+              </th>
+              <th>
+                <input type="text" class="ipt" placeholder="ip">
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <select class="sel" name="">
+                  <option value="">请选择支付状态</option>
+                  <option value="">已支付</option>
+                  <option value="">未支付</option>
+                </select>
+              </td>
+              <td>
+                <select class="sel" name="">
+                  <option value="">请选择网关</option>
+                  <option value="">255.255.0.0</option>
+                  <option value="">255.255.0.1</option>
+                </select>
+              </td>
+              <td>
+                <select class="sel" name="">
+                  <option value="">请选择通道</option>
+                  <option value="">A</option>
+                  <option value="">B</option>
+                </select>
+              </td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- //搜索 -->
+      <!-- 列表 -->
+      <div class="list">
+        <table  width="100%">
+          <thead>
+            <tr>
+              <th>代理ID</th>
+              <th>商户号</th>
+              <th>平台订单号</th>
+              <th>商户订单号</th>
+              <th>订单金额</th>
+              <th>实付金额</th>
+              <th>商户收入</th>
+              <th>代理收入</th>
+              <th>平台收入</th>
+              <th>网关</th>
+              <th>用户状态</th>
+              <th>提交时间</th>
+              <th>订单状态</th>
+              <th>通知状态</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>21398</td>
+              <td>23478<br>ST2018029616</td>
+              <td>ST35454687843546873519c</td>
+              <td>20953ls8jljlkj80935</td>
+              <td>3000</td>
+              <td>3000</td>
+              <td>2000</td>
+              <td>1000</td>
+              <td>100</td>
+              <td>支付宝扫码<br>【马上付】</td>
+              <td>下单成功，用户未支付<br>[120.293.38.200]</td>
+              <td>2018-09-22 09:09:17</td>
+              <td><span class="st-todo">未支付</span></td>
+              <td><span class="st-todo">未通知</span></td>
+              <td>
+                <a href="javascript:;"  class="btn-opt">补单</a>
+                <a href="javascript:;" class="btn-opt">通知</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- //列表 -->
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

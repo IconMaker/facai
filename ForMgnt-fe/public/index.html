@@ -16,7 +16,7 @@ $(function(){
     $(".bd").toggleClass("show")
     $(".aside").toggleClass("show")
     $(".header").toggleClass("show")
-    $(".mask").show()
+    $(".mask").toggle()
   })
 })
 </script>
@@ -35,8 +35,8 @@ $(function(){
   <div class="menu">
     <h3>菜单</h3>
     <div>
-      <a href="javascript:;">订单管理</a>
-      <a href="javascript:;" class="curr">商户管理</a>
+      <a href="javascript:;" class="curr">订单管理</a>
+      <a href="javascript:;">商户管理</a>
       <a href="javascript:;">商户配额</a>
       <a href="javascript:;">代理管理</a>
       <a href="javascript:;">统计</a>
@@ -60,61 +60,168 @@ $(function(){
       <h2 class="sub-title">订单列表</h2>
       <!-- 搜索 -->
       <div class="search-box">
-        <table>
+        <div class="form-flex">
+          <ul>
+            <li>
+              <input type="text" class="ipt" placeholder="代理ID">
+            </li>
+            <li>
+              <input type="text" class="ipt" placeholder="商户ID">
+            </li>
+            <li>
+              <input type="text" class="ipt" placeholder="商户号">
+            </li>
+            <li>
+              <input type="text" class="ipt" placeholder="平台订单号">
+            </li>
+            <li>
+              <input type="text" class="ipt" placeholder="商户订单号">
+            </li>
+            <li>
+              <input type="text" class="ipt" placeholder="ip">
+            </li>
+          </ul>
+        </div>
+        <div class="form-flex">
+          <ul>
+            <li>
+              <select class="sel" name="">
+                <option value="">请选择支付状态</option>
+                <option value="">未支付</option>
+                <option value="">已下单，已支付</option>
+              </select>
+            </li>
+            <li>
+              <select class="sel" name="">
+                <option value="">请选择网关</option>
+                <option value="">支付宝扫码</option>
+                <option value="">微信支付</option>
+              </select>
+            </li>
+            <li>
+              <select class="sel" name="">
+                <option value="">请选择通道</option>
+                <option value="">A</option>
+                <option value="">B</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+        <div class="form-flex fx2">
+          <ul>
+            <li>
+              <input type="date" class="date">
+            </li>
+            <li>
+              <input type="date" class="date">
+            </li>
+            <li>
+              <a href="javascript:;" class="btn-so">搜索</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- //搜索 -->
+      <!-- 统计 -->
+      <div class="total">
+        <ul>
+          <li class="t01">提交金额：1000元</li>
+          <li class="t02">支付金额：1000元</li>
+          <li class="t03">平台收入：1000元</li>
+          <li class="t04">成功订单笔数：1123笔</li>
+          <li class="t05">失败订单笔数：3笔</li>
+          <li class="t06">订单笔数：1233笔</li>
+          <li class="t07">成功率：100%</li>
+        </ul>
+      </div>
+      <!-- //统计 -->
+      <!-- 列表 -->
+      <div class="list">
+        <table  width="100%">
           <thead>
             <tr>
-              <th>
-                <input type="text" class="ipt" placeholder="代理ID">
-              </th>
-              <th>
-                <input type="text" class="ipt" placeholder="商户ID">
-              </th>
-              <th>
-                <input type="text" class="ipt" placeholder="商户号">
-              </th>
-              <th>
-                <input type="text" class="ipt" placeholder="平台订单号">
-              </th>
-              <th>
-                <input type="text" class="ipt" placeholder="商户订单号">
-              </th>
-              <th>
-                <input type="text" class="ipt" placeholder="ip">
-              </th>
+              <th>代理ID</th>
+              <th>商户号</th>
+              <th>平台订单号</th>
+              <th>商户订单号</th>
+              <th>订单金额</th>
+              <th>实付金额</th>
+              <th>商户收入</th>
+              <th>代理收入</th>
+              <th>平台收入</th>
+              <th>网关</th>
+              <th>用户状态</th>
+              <th>提交时间</th>
+              <th>订单状态</th>
+              <th>通知状态</th>
+              <th>操作</th>
             </tr>
           </thead>
           <tbody>
             <tr>
+              <td>21398</td>
+              <td>23478<br>ST2018029616</td>
+              <td>ST35454687843546873519c</td>
+              <td>20953ls8jljlkj80935</td>
+              <td>3000</td>
+              <td>3000</td>
+              <td>2000</td>
+              <td>1000</td>
+              <td>100</td>
+              <td>支付宝扫码<br>【马上付】</td>
+              <td>下单成功，用户未支付<br>[120.293.38.200]</td>
+              <td>2018-09-22 09:09:17</td>
+              <td><span class="state todo">未支付</span></td>
+              <td><span class="state todo">未通知</span></td>
               <td>
-                <select class="sel" name="">
-                  <option value="">请选择支付状态</option>
-                  <option value="">已支付</option>
-                  <option value="">未支付</option>
-                </select>
+                <a href="javascript:;"  class="btn btn-primary">补单</a>
+                <a href="javascript:;" class="btn btn-primary">通知</a>
               </td>
+            </tr>
+            <tr>
+              <td>21398</td>
+              <td>23478<br>ST2018029616</td>
+              <td>ST35454687843546873519c</td>
+              <td>20953ls8jljlkj80935</td>
+              <td>3000</td>
+              <td>3000</td>
+              <td>2000</td>
+              <td>1000</td>
+              <td>100</td>
+              <td>支付宝扫码<br>【马上付】</td>
+              <td>下单成功，用户未支付<br>[120.293.38.200]</td>
+              <td>2018-09-22 09:09:17</td>
+              <td><span class="state todo">未支付</span></td>
+              <td><span class="state todo">未通知</span></td>
               <td>
-                <select class="sel" name="">
-                  <option value="">请选择网关</option>
-                  <option value="">255.255.0.0</option>
-                  <option value="">255.255.0.1</option>
-                </select>
+                <a href="javascript:;"  class="btn btn-primary">补单</a>
+                <a href="javascript:;" class="btn btn-primary">通知</a>
               </td>
+            </tr>
+            <tr>
+              <td>21398</td>
+              <td>23478<br>ST2018029616</td>
+              <td>ST35454687843546873519c</td>
+              <td>20953ls8jljlkj80935</td>
+              <td>3000</td>
+              <td>3000</td>
+              <td>2000</td>
+              <td>1000</td>
+              <td>100</td>
+              <td>支付宝扫码<br>【马上付】</td>
+              <td>下单成功，用户未支付<br>[120.293.38.200]</td>
+              <td>2018-09-22 09:09:17</td>
+              <td><span class="state todo">未支付</span></td>
+              <td><span class="state todo">未通知</span></td>
               <td>
-                <select class="sel" name="">
-                  <option value="">请选择通道</option>
-                  <option value="">A</option>
-                  <option value="">B</option>
-                </select>
+                <a href="javascript:;"  class="btn btn-primary">补单</a>
+                <a href="javascript:;" class="btn btn-primary">通知</a>
               </td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
             </tr>
           </tbody>
         </table>
       </div>
-
-      <!-- //搜索 -->
+      <!-- //列表 -->
     </div>
   </div>
 </div>
