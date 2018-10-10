@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title></title>
+<link rel="stylesheet" href="/stylesheets/facai.css" />
+<script src="/javascripts/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+  // 菜单
+  $(".menu-fold").on("click",function(){
+    $(".bd").toggleClass("show")
+    $(".aside").toggleClass("show")
+    $(".header").toggleClass("show")
+    $(".mask").show()
+  })
+})
+</script>
+</head>
+<body class="bd show">
+<!-- 侧边菜单 -->
+<div class="aside show">
+  <div class="logo">
+    <i></i>
+    <span>创富后台管理系统</span>
+  </div>
+  <div class="avatar">
+    <i style="background-image:url(images/avatar.png)"></i>
+    <span class="online">在线</span>
+  </div>
+  <div class="menu">
+    <h3>菜单</h3>
+    <div>
+      <a href="javascript:;">订单管理</a>
+      <a href="javascript:;" class="curr">商户管理</a>
+      <a href="javascript:;">商户配额</a>
+      <a href="javascript:;">代理管理</a>
+      <a href="javascript:;">统计</a>
+      <a href="javascript:;">提现管理</a>
+      <a href="javascript:;">通道管理</a>
+      <a href="javascript:;">通道池管理</a>
+    </div>
+  </div>
+</div>
+<!-- //侧边菜单 -->
+<div class="container">
+  <!-- header -->
+  <div class="header show">
+    <i class="menu-fold"></i>
+  </div>
+  <!-- //header -->
+  <div class="main">
+    <h1 class="title">订单列表 <span>订单列表</span></h1>
+    <div class="f-box">
+      <h2 class="sub-title">订单列表</h2>
+      <!-- 搜索 -->
+      <div class="search-box">
+        
+      </div>
+      <table >
+        <thead>
+          <tr>
+            <th>A</th>
+            <th>A</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>A</td>
+            <td>b</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- //搜索 -->
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
