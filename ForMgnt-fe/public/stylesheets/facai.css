@@ -236,6 +236,7 @@ h2.sub-title{
   background-color: #fff;
   border-top: 3px solid  #3C8DBD;
   padding: 10px;
+  position: relative;
 }
 .ipt,
 .date,
@@ -267,6 +268,9 @@ h2.sub-title{
 .list td{
   padding: 5px 10px;
   border: 1px solid  #F8E6E9;
+}
+.list tr:nth-child(2n){
+  background-color: #F9F9F9;
 }
 
 /* flex */
@@ -412,6 +416,9 @@ h2.sub-title{
 .state.todo{
   background-color: #DD4A38;
 }
+.state.success{
+  background-color: #00A75A;
+}
 
 /* button */
 .btn{
@@ -423,8 +430,36 @@ h2.sub-title{
   border-radius: 3px;
   margin: 3px;
 }
-.btn-primary{
+.btn-warn{
   background-color: #F49D12;
   border: 1px solid  #DB8B0A;
-
+}
+.btn-primary{
+  background-color: #00C1F0;
+  border: 1px solid  #02B4E0;
+}
+.btn-success{
+  background-color: #00A75A;
+  border: 1px solid  #009D4F;
+}
+.btn-error{
+  background-color: #DD4A38;
+  border: 1px solid  #DA3D2A;
+}
+.btn-default{
+  color: #333;
+  background-color: #F5F5F5;
+  border: 1px solid  #E7E7E7;
+}
+.toolbar{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  text-align: right;
+  padding: 5px;
+}
+.toolbar a{
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
