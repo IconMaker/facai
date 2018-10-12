@@ -169,7 +169,7 @@ em, h3 {
   text-decoration: none;
 }
 .menu a.curr{
-  background-color: rgb(239, 245, 248);
+  background-color: rgb(231, 237, 241);
 }
 .container{
   position: relative;
@@ -426,5 +426,5 @@ h2.sub-title{
 .btn-primary{
   background-color: #F49D12;
   border: 1px solid  #DB8B0A;
-  
+
 }
