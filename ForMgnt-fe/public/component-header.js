@@ -19,7 +19,7 @@ var HeaderComp = {
 
 // 菜单操作
 $(function(){
-  $(".menu-fold").on("click",function(){
+  $(".menu-fold, .mask").on("click",function(){
     $(".bd").toggleClass("show")
     $(".aside").toggleClass("show")
     $(".header").toggleClass("show")
