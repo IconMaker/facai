@@ -288,7 +288,7 @@ h2.sub-title{
 }
 .btn-so{
   display: block;
-  line-height: 32px;
+  line-height: 31px;
   background-color: #00C1F0;
   border: 1px solid  #08AED6;
   border-radius: 3px;
@@ -349,6 +349,9 @@ h2.sub-title{
   .sel{
     padding-left: 1px;
   }
+  .btn-so{
+    line-height: 28px;
+  }
   .form-flex ul{
     justify-content: space-between;
   }
@@ -365,6 +368,8 @@ h2.sub-title{
     flex:0 0 100%;
   }
 }
+/* end @media */
+
 /* total */
 .total ul{
   display: -webkit-flex;
