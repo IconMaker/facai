@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title></title>
+<link rel="stylesheet" href="stylesheets/facai.css" />
+<link rel="stylesheet" href="stylesheets/media.css" />
+<script src="javascripts/vue.js"></script>
+<script src="javascripts/jquery-3.2.1.min.js"></script>
+</head>
+<body class="bd">
+<div id="riches">
+  <!-- 侧边菜单 -->
+  <aside-comp></aside-comp>
+  <!-- //侧边菜单 -->
+  <div class="container">
+    <!-- header -->
+    <header-comp></header-comp>
+    <!-- //header -->
+    <div class="main">
+      <h1 class="title">商户管理 <span>用户编辑</span> <a href="" class="c01">← 返回上一级</a></h1>
+      <div class="f-box">
+        <!-- 编辑 -->
+        <div class="edit-form-wrap">
+          <div class="edit-form">
+            <ul>
+              <li>
+                <span>上级代理<b>：</b></span>
+                <p>
+                  <select class="sel" name="">
+                    <option value="">CF2003</option>
+                    <option value="">CF2001</option>
+                    <option value="">CF2002</option>
+                  </select>
+                </p>
+              </li>
+              <li>
+                <span>操作<b>：</b></span>
+                <p><a href="javascript:;" class="btn btn-success">重置支付密码</a></p>
+              </li>
+              <li>
+                <span>用户名<b>：</b></span>
+                <p><input type="text" class="ipt" placeholder="CF002100"></p>
+              </li>
+              <li>
+                <span>密码<b>：</b></span>
+                <p><input type="password" class="ipt" placeholder="不填则不修改"></p>
+              </li>
+              <li>
+                <span>电话<b>：</b></span>
+                <p><input type="text" class="ipt" placeholder=""></p>
+              </li>
+              <li>
+                <span>负责人qq<b>：</b></span>
+                <p><input type="text" class="ipt" placeholder=""></p>
+              </li>
+              <li>
+                <span>商户号<b>：</b></span>
+                <p><input type="text" class="ipt" placeholder="ST0395"></p>
+              </li>
+              <li>
+                <span>开户省市<b><b>：</b></b></span>
+                <p>
+                  <select class="sel" name="">
+                    <option value="">上海市</option>
+                  </select>
+                </p>
+                <p>
+                  <select class="sel" name="">
+                    <option value="">浦东新区</option>
+                  </select>
+                </p>
+              </li>
+              <li>
+                <span>银行账号<b><b>：</b></b></span>
+                <p><input type="text" class="ipt" placeholder=""></p>
+              </li>
+              <li>
+                <span>开户银行<b>：</b></span>
+                <p><input type="text" class="ipt" placeholder=""></p>
+              </li>
+              <li>
+                <span>开户支行<b>：</b></span>
+                <p><input type="text" class="ipt" placeholder=""></p>
+              </li>
+              <li>
+                <span>开户人姓名<b>：</b></span>
+                <p><input type="text" class="ipt" placeholder=""></p>
+              </li>
+              <li>
+                <span>联行号<b>：</b></span>
+                <p><input type="text" class="ipt" placeholder=""></p>
+              </li>
+              <li>
+                <span>结算周期<b>：</b></span>
+                <p>
+                  <select class="sel" name="">
+                    <option value="">D+0</option>
+                  </select>
+                </p>
+              </li>
+              <li>
+                <span>微信H5费率<b>：</b></span>
+                <p><input type="text" class="ipt" placeholder="0.022"></p>
+                <p>
+                  <select class="sel" name="">
+                    <option value="">禁用</option>
+                    <option value="">启用</option>
+                  </select>
+                </p>
+              </li>
+              <li>
+                <span>微信扫码费率<b>：</b></span>
+                <p><input type="text" class="ipt" placeholder="0.022"></p>
+                <p>
+                  <select class="sel" name="">
+                    <option value="">禁用</option>
+                    <option value="">启用</option>
+                  </select>
+                </p>
+              </li>
+              <li>
+                <span>微信WAP费率<b>：</b></span>
+                <p><input type="text" class="ipt" placeholder="0.022"></p>
+                <p>
+                  <select class="sel" name="">
+                    <option value="">禁用</option>
+                    <option value="">启用</option>
+                  </select>
+                </p>
+              </li>
+              <li>
+                <span>支付宝WAP费率<b>：</b></span>
+                <p><input type="text" class="ipt" placeholder="0.022"></p>
+                <p>
+                  <select class="sel" name="">
+                    <option value="">禁用</option>
+                    <option value="">启用</option>
+                  </select>
+                </p>
+              </li>
+              <li>
+                <span>支付宝H5费率<b>：</b></span>
+                <p><input type="text" class="ipt" placeholder="0.022"></p>
+                <p>
+                  <select class="sel" name="">
+                    <option value="">禁用</option>
+                    <option value="">启用</option>
+                  </select>
+                </p>
+              </li>
+              <li>
+                <span>支付宝扫码费率<b>：</b></span>
+                <p><input type="text" class="ipt" placeholder="0.022"></p>
+                <p>
+                  <select class="sel" name="">
+                    <option value="">禁用</option>
+                    <option value="">启用</option>
+                  </select>
+                </p>
+              </li>
+              <li>
+                <span>京东费率<b>：</b></span>
+                <p><input type="text" class="ipt" placeholder="0.022"></p>
+                <p>
+                  <select class="sel" name="">
+                    <option value="">禁用</option>
+                    <option value="">启用</option>
+                  </select>
+                </p>
+              </li>
+              <li>
+                <span>网关费率<b>：</b></span>
+                <p><input type="text" class="ipt" placeholder="0.022"></p>
+                <p>
+                  <select class="sel" name="">
+                    <option value="">禁用</option>
+                    <option value="">启用</option>
+                  </select>
+                </p>
+              </li>
+              <li>
+                <span>快捷支付费率<b>：</b></span>
+                <p><input type="text" class="ipt" placeholder="0.022"></p>
+                <p>
+                  <select class="sel" name="">
+                    <option value="">禁用</option>
+                    <option value="">启用</option>
+                  </select>
+                </p>
+              </li>
+              <li>
+                <span>qq钱包wap费率<b>：</b></span>
+                <p><input type="text" class="ipt" placeholder="0.022"></p>
+                <p>
+                  <select class="sel" name="">
+                    <option value="">禁用</option>
+                    <option value="">启用</option>
+                  </select>
+                </p>
+              </li>
+              <li>
+                <span>银联二维码费率<b>：</b></span>
+                <p><input type="text" class="ipt" placeholder="0.022"></p>
+                <p>
+                  <select class="sel" name="">
+                    <option value="">禁用</option>
+                    <option value="">启用</option>
+                  </select>
+                </p>
+              </li>
+              <li>
+                <span>百度钱包费率<b>：</b></span>
+                <p><input type="text" class="ipt" placeholder="0.022"></p>
+                <p>
+                  <select class="sel" name="">
+                    <option value="">禁用</option>
+                    <option value="">启用</option>
+                  </select>
+                </p>
+              </li>
+              <li>
+                <span>快捷二维码费率<b>：</b></span>
+                <p><input type="text" class="ipt" placeholder="0.022"></p>
+                <p>
+                  <select class="sel" name="">
+                    <option value="">禁用</option>
+                    <option value="">启用</option>
+                  </select>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- //编辑 -->
+        <!-- 按钮栏 -->
+        <div class="footer-group">
+          <a href="javascript:;" class="btn btn-primary">保存</a>
+          <a href="javascript:;" class="btn btn-default">返回</a>
+        </div>
+        <!-- //按钮栏 -->
+      </div>
+    </div>
+    <div class="blank02"></div>
+
+  </div>
+</div>
+</body>
+</html>
+<script src="component-header.js"></script>
+<script src="component-aside.js"></script>
+<script type="text/javascript">
+// vue实例
+var app = new Vue({
+  el: '#riches',
+  components: {
+    headerComp: HeaderComp,
+    asideComp: AsideComp
+  },
+  data: {
+
+  },
+  methods:{
+
+  },
+  created: function(){
+
+	}
+})
+</script>

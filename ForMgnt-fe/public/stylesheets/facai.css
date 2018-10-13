@@ -226,6 +226,11 @@ h1.title span{
   padding-left: 5px;
   padding-bottom: 15px;
 }
+h1.title a{
+  font-size: 14px;
+  float: right;
+  margin-top: 10px;
+}
 h2.sub-title{
   font-size: 16px;
   font-weight: normal;
@@ -297,79 +302,6 @@ h2.sub-title{
   width: 60px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* 适配 */
-@media (max-width: 820px){
-  .aside{
-    -webkit-transform: translateX(-218px);
-  }
-  .aside.show{
-    -webkit-transform: translateX(0);
-  }
-  .header{
-    -webkit-transform: translateX(0);
-  }
-  .header.show{
-    -webkit-transform: translateX(218px);
-  }
-  .bd{
-    padding-left: 0;
-  }
-  .bd.show{
-    padding-left: 218px;
-  }
-  .mask {
-    position: fixed;
-    z-index: 99;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.0);
-    display: none;
-  }
-  .ipt,
-  .date,
-  .sel{
-    font-size: 12px;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-  .sel{
-    padding-left: 1px;
-  }
-  .btn-so{
-    line-height: 28px;
-  }
-  .form-flex ul{
-    justify-content: space-between;
-  }
-  .form-flex ul li{
-    flex:0 0 -webkit-calc(33.333% - 6px);
-    padding-right: 0;
-    margin-bottom: 5px;
-  }
-  /* flex grid */
-  .fx2 ul li{
-    flex:0 0 -webkit-calc(50% - 5px) !important;
-  }
-  .fx1 ul li{
-    flex:0 0 100%;
-  }
-}
-/* end @media */
-
 /* total */
 .total ul{
   display: -webkit-flex;
@@ -429,7 +361,7 @@ h2.sub-title{
 .btn{
   display: inline-block;
   line-height: 1.2;
-  padding: 2px 5px;
+  padding: 5px 5px;
   color: #fff;
   text-align: center;
   border-radius: 3px;
@@ -467,4 +399,59 @@ h2.sub-title{
 .toolbar a{
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+
+/* 编辑表单 */
+.edit-form-wrap{
+  padding: 10px 5px 10px 30px;
+}
+.edit-form{
+  width: 60%;
+}
+.edit-form ul li{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  justify-content: center;
+  padding: 5px 0;
+}
+.edit-form ul li span{
+  width: 128px;
+  text-align: right;
+  padding-right: 10px;
+}
+.edit-form ul li span b{
+  font-weight: normal;
+}
+.edit-form ul li p{
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding-left: 5px;
+}
+.c01{
+  color: #387de8;
+}
+/* footer */
+.footer-group{
+  border-top: 1px solid  #ddd;
+  padding: 5px 0;
+  text-align: center;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+.footer-group a{
+  min-width: 100px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.blank02{
+  height: 50px;
 }
