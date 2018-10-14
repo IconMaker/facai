@@ -20,9 +20,9 @@ var AsideComp = {
           <a href="/index.html" class="curr">订单管理</a>
           <a href="/merchant.html">商户管理</a>
           <a href="javascript:;">商户配额</a>
-          <a href="javascript:;">代理管理</a>
-          <a href="javascript:;">统计</a>
-          <a href="javascript:;">提现管理</a>
+          <a href="/agent.html">代理管理</a>
+          <a href="/statistic.html">统计</a>
+          <a href="/cash.html">提现管理</a>
           <a href="javascript:;">通道管理</a>
           <a href="javascript:;">通道池管理</a>
         </div>

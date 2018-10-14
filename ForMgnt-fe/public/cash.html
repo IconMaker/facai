@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title></title>
+<link rel="stylesheet" href="stylesheets/facai.css" />
+<link rel="stylesheet" href="stylesheets/media.css" />
+<script src="javascripts/vue.js"></script>
+<script src="javascripts/jquery-3.2.1.min.js"></script>
+</head>
+<body class="bd">
+<div id="riches">
+  <!-- 侧边菜单 -->
+  <aside-comp></aside-comp>
+  <!-- //侧边菜单 -->
+  <div class="container">
+    <!-- header -->
+    <header-comp></header-comp>
+    <!-- //header -->
+    <div class="main">
+      <h1 class="title">提现管理 <span>提现管理</span></h1>
+      <div class="f-box">
+        <h2 class="sub-title">提现申请</h2>
+        <!-- 搜索 -->
+        <div class="search-box">
+          <div class="form-flex fx2">
+            <ul>
+              <li>
+                <input type="text" class="ipt" placeholder="代理ID">
+              </li>
+              <li>
+                <input type="date" class="date">
+              </li>
+              <li>
+                <input type="date" class="date">
+              </li>
+              <li>
+                <a href="javascript:;" class="btn-so">搜索</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- //搜索 -->
+        <!-- 统计 -->
+        <div class="total">
+          <ul>
+            <li class="t01">已提现：1</li>
+            <li class="t02">申请中：2535</li>
+            <li class="t03">驳回：0</li>
+          </ul>
+        </div>
+        <!-- //统计 -->
+        <!-- 列表 -->
+        <div class="list">
+          <table  width="100%">
+            <thead>
+              <tr>
+                <th>提现类型</th>
+                <th>用户/代理ID</th>
+                <th>商户号</th>
+                <th>提现金额(已扣除手续费)</th>
+                <th>状态</th>
+                <th>开户省</th>
+                <th>开户市</th>
+                <th>开户银行</th>
+                <th>开户人姓名</th>
+                <th>开户人账号</th>
+                <th>时间</th>
+                <th>结果</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>用户提现</td>
+                <td>0295</td>
+                <td>CF9350945</td>
+                <td>
+                  申请金额：1000,000<br>
+                  打款金额：1000,000<br>
+                  剩余金额：1000,000<br>
+                </td>
+                <td><span class="state ing">申请中</span></td>
+                <td>北京</td>
+                <td>朝阳区</td>
+                <td>北京朝阳区建设支行</td>
+                <td>郑保瑞</td>
+                <td>6336 3502 3592 2032 100</td>
+                <td>申请时间:2018-10-12 10:10:30</td>
+                <td>处理中</td>
+                <td>
+                  <a href="javascript:;"  class="btn btn-default">审核标记</a>
+                  <a href="javascript:;" class="btn btn-error">驳回</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- //列表 -->
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+<script src="component-header.js"></script>
+<script src="component-aside.js"></script>
+<script type="text/javascript">
+// vue实例
+var app = new Vue({
+  el: '#riches',
+  components: {
+    headerComp: HeaderComp,
+    asideComp: AsideComp
+  },
+  data: {
+
+  },
+  methods: {
+
+  },
+  created: function(){
+
+	}
+})
+</script>

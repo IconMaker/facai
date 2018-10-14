@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title></title>
+<link rel="stylesheet" href="stylesheets/facai.css" />
+<link rel="stylesheet" href="stylesheets/media.css" />
+<script src="javascripts/vue.js"></script>
+<script src="javascripts/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+  // 弹出层通道
+  $("#agent-detail").on("click",function(){
+  	$("#dialog").fadeIn(200)
+  })
+  $(".dialog .close").on("click",function(e){
+  	e.stopPropagation()
+  	$("#dialog").fadeOut(200)
+  })
+})
+</script>
+</head>
+<body class="bd">
+<div id="riches">
+  <!-- 侧边菜单 -->
+  <aside-comp></aside-comp>
+  <!-- //侧边菜单 -->
+  <div class="container">
+    <!-- header -->
+    <header-comp></header-comp>
+    <!-- //header -->
+    <div class="main">
+      <h1 class="title">代理列表 <span>代理列表</span></h1>
+      <div class="f-box">
+        <div class="toolbar">
+          <a href="javascript:;" class="btn btn-primary">新增代理</a>
+        </div>
+        <h2 class="sub-title">代理列表</h2>
+        <!-- 列表 -->
+        <div class="list">
+          <table  width="100%">
+            <thead>
+              <tr>
+                <th>用户名</th>
+                <th>商户号</th>
+                <th>电话</th>
+                <th>结算周期</th>
+                <th>结算费率</th>
+                <th>状态</th>
+                <th>余额</th>
+                <th>总额</th>
+                <th>备注</th>
+                <th>修改时间</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>郑保瑞</td>
+                <td>535235</td>
+                <td>13184739087</td>
+                <td>D+0</td>
+                <td>0.015</td>
+                <td><span class="state success">启用</span></td>
+                <td>100,000.00</td>
+                <td>1606,000.00</td>
+                <td>-</td>
+                <td>2018-10-01</td>
+                <td>
+                  <a href="javascript:;"  class="btn btn-primary">编辑</a>
+                  <a href="javascript:;" class="btn btn-error">禁用</a>
+                  <a href="javascript:;" id="agent-detail" class="btn btn-success">详情</a>
+                  <a href="javascript:;" class="btn btn-error">删除</a>
+                </td>
+              </tr>
+              <tr>
+                <td>郑保瑞</td>
+                <td>535235</td>
+                <td>13184739087</td>
+                <td>D+0</td>
+                <td>0.015</td>
+                <td><span class="state success">启用</span></td>
+                <td>100,000.00</td>
+                <td>1606,000.00</td>
+                <td>-</td>
+                <td>2018-10-01</td>
+                <td>
+                  <a href="javascript:;"  class="btn btn-primary">编辑</a>
+                  <a href="javascript:;" class="btn btn-error">禁用</a>
+                  <a href="javascript:;" id="agent-detail" class="btn btn-success">详情</a>
+                  <a href="javascript:;" class="btn btn-error">删除</a>
+                </td>
+              </tr>
+              <tr>
+                <td>郑保瑞</td>
+                <td>535235</td>
+                <td>13184739087</td>
+                <td>D+0</td>
+                <td>0.015</td>
+                <td><span class="state success">启用</span></td>
+                <td>100,000.00</td>
+                <td>1606,000.00</td>
+                <td>-</td>
+                <td>2018-10-01</td>
+                <td>
+                  <a href="javascript:;"  class="btn btn-primary">编辑</a>
+                  <a href="javascript:;" class="btn btn-error">禁用</a>
+                  <a href="javascript:;" id="agent-detail" class="btn btn-success">详情</a>
+                  <a href="javascript:;" class="btn btn-error">删除</a>
+                </td>
+              </tr>
+              <tr>
+                <td>郑保瑞</td>
+                <td>535235</td>
+                <td>13184739087</td>
+                <td>D+0</td>
+                <td>0.015</td>
+                <td><span class="state success">启用</span></td>
+                <td>100,000.00</td>
+                <td>1606,000.00</td>
+                <td>-</td>
+                <td>2018-10-01</td>
+                <td>
+                  <a href="javascript:;"  class="btn btn-primary">编辑</a>
+                  <a href="javascript:;" class="btn btn-error">禁用</a>
+                  <a href="javascript:;" id="agent-detail" class="btn btn-success">详情</a>
+                  <a href="javascript:;" class="btn btn-error">删除</a>
+                </td>
+              </tr>
+              <tr>
+                <td>郑保瑞</td>
+                <td>535235</td>
+                <td>13184739087</td>
+                <td>D+0</td>
+                <td>0.015</td>
+                <td><span class="state success">启用</span></td>
+                <td>100,000.00</td>
+                <td>1606,000.00</td>
+                <td>-</td>
+                <td>2018-10-01</td>
+                <td>
+                  <a href="javascript:;"  class="btn btn-primary">编辑</a>
+                  <a href="javascript:;" class="btn btn-error">禁用</a>
+                  <a href="javascript:;" id="agent-detail" class="btn btn-success">详情</a>
+                  <a href="javascript:;" class="btn btn-error">删除</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- //列表 -->
+      </div>
+    </div>
+    <!-- 弹出层 代理 -->
+    <div id="dialog" style="display:none">
+      <div class="dialog-mask"></div>
+      <div class="dialog d-bg">
+        <span class="close">×</span>
+        <div class="dialog-header">代理详情</div>
+        <div class="dialog-body">
+          <h1 class="title">分润详情</h1>
+          <div class="f-box">
+            <h2 class="sub-title">代理列表</h2>
+            <!-- 搜索 -->
+            <div class="search-box">
+              <div class="form-flex fx2">
+                <ul>
+                  <li>
+                    <input type="date" class="date">
+                  </li>
+                  <li>
+                    <input type="date" class="date">
+                  </li>
+                  <li>
+                    <a href="javascript:;" class="btn-so">搜索</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- //搜索 -->
+            <!-- 列表 -->
+            <div class="list">
+              <table  width="100%">
+                <thead>
+                  <tr>
+                    <th>商户名</th>
+                    <th>总额</th>
+                    <th>分润</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>CF0001</td>
+                    <td>1000</td>
+                    <td>10</td>
+                  </tr>
+                  <tr>
+                    <td>CF0001</td>
+                    <td>1000</td>
+                    <td>10</td>
+                  </tr>
+                  <tr>
+                    <td>CF0001</td>
+                    <td>1000</td>
+                    <td>10</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- //列表 -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //弹出层 通道 -->
+  </div>
+</div>
+
+</body>
+</html>
+<script src="component-header.js"></script>
+<script src="component-aside.js"></script>
+<script type="text/javascript">
+// vue实例
+var app = new Vue({
+  el: '#riches',
+  components: {
+    headerComp: HeaderComp,
+    asideComp: AsideComp
+  },
+  data: {
+
+  },
+  methods:{
+
+  },
+  created: function(){
+
+	}
+})
+
+
+</script>

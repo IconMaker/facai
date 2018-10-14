@@ -71,5 +71,9 @@
   .edit-form ul li span b{
     display: none;
   }
+  .dialog {
+    width: 85%;
+    left: 50%;
+  }
 }
 /* end @media */

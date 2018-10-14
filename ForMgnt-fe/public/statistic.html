@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title></title>
+<link rel="stylesheet" href="stylesheets/facai.css" />
+<link rel="stylesheet" href="stylesheets/media.css" />
+<script src="javascripts/vue.js"></script>
+<script src="javascripts/jquery-3.2.1.min.js"></script>
+</head>
+<body class="bd">
+<div id="riches">
+  <!-- 侧边菜单 -->
+  <aside-comp></aside-comp>
+  <!-- //侧边菜单 -->
+  <div class="container">
+    <!-- header -->
+    <header-comp></header-comp>
+    <!-- //header -->
+    <div class="main">
+      <!-- 统计面板 -->
+      <div class="statistic-panel">
+        <h3>总览 <span>面板</span></h3>
+        <div class="statistic">
+          <a href="javascript:;">
+            <label>订单成功笔数：<em>1000</em></label>
+            <p>more</p>
+          </a>
+          <a href="javascript:;">
+            <label>订单失败笔数：<em>1000</em></label>
+            <p>more</p>
+          </a>
+          <a href="javascript:;">
+            <label>当日订单额：<em>1000</em></label>
+            <p>more</p>
+          </a>
+          <a href="javascript:;">
+            <label>当日支付额：<em>1000</em></label>
+            <p>more</p>
+          </a>
+          <a href="javascript:;">
+            <label>昨日订单额：<em>1000</em></label>
+            <p>more</p>
+          </a>
+          <a href="javascript:;">
+            <label>昨日平台总收入：<em>1000</em></label>
+            <p>more</p>
+          </a>
+          <a href="javascript:;">
+            <label>今日平台总收入：<em>1000</em></label>
+            <p>more</p>
+          </a>
+          <a href="javascript:;">
+            <label>平台总收入：<em>1000</em></label>
+            <p>more</p>
+          </a>
+          <a href="javascript:;">
+            <label>未结算总金额：<em>1000</em></label>
+            <p>more</p>
+          </a>
+          <a href="javascript:;">
+            <label>未下发总金额：<em>1000</em></label>
+            <p>more</p>
+          </a>
+          <a href="javascript:;">
+            <label>昨日未下发总金额：<em>1000</em></label>
+            <p>more</p>
+          </a>
+          <a href="javascript:;">
+            <label>代理未下发金额：<em>1000</em></label>
+            <p>more</p>
+          </a>
+        </div>
+      </div>
+      <!-- //统计面板 -->
+      <!-- 一周流水 -->
+      <div class="fa-card">
+        <h3>一周流水</h3>
+        <div class="fa-card-body">
+
+        </div>
+      </div>
+      <!-- //一周流水 -->
+      <!-- 今日通道订单金额 -->
+      <div class="fa-card">
+        <h3>今日通道订单金额</h3>
+        <div class="fa-card-body">
+
+        </div>
+      </div>
+      <!-- //今日通道订单金额 -->
+      <!-- 昨日通道订单金额 -->
+      <div class="fa-card">
+        <h3>昨日通道订单金额</h3>
+        <div class="fa-card-body">
+
+        </div>
+      </div>
+      <!-- //昨日通道订单金额 -->
+    </div>
+  </div>
+</div>
+</body>
+</html>
+<script src="component-header.js"></script>
+<script src="component-aside.js"></script>
+<script type="text/javascript">
+// vue实例
+var app = new Vue({
+  el: '#riches',
+  components: {
+    headerComp: HeaderComp,
+    asideComp: AsideComp
+  },
+  data: {
+
+  },
+  methods:{
+
+  },
+  created: function(){
+
+	}
+})
+</script>
