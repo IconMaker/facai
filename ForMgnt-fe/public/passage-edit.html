@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title></title>
+<link rel="stylesheet" href="stylesheets/facai.css" />
+<link rel="stylesheet" href="stylesheets/media.css" />
+<script src="javascripts/vue.js"></script>
+<script src="javascripts/jquery-3.2.1.min.js"></script>
+</head>
+<body class="bd">
+<div id="riches">
+  <!-- 侧边菜单 -->
+  <aside-comp></aside-comp>
+  <!-- //侧边菜单 -->
+  <div class="container">
+    <!-- header -->
+    <header-comp></header-comp>
+    <!-- //header -->
+    <div class="main">
+      <h1 class="title">通道管理 <span>通道编辑</span> <a href="javascript:history.go(-1)" class="c01">← 返回上一级</a></h1>
+      <div class="f-box">
+        <h2 class="sub-title">通道编辑</h2>
+        <!-- 编辑 -->
+        <div class="edit-form-wrap">
+          <div class="edit-form">
+            <ul>
+              <li>
+                <span>上游名称<b>：</b></span>
+                <p><input type="text" class="ipt" placeholder="马上付"></p>
+              </li>
+              <li>
+                <span>是否启用<b>：</b></span>
+                <p>
+                  <select class="sel" name="">
+                    <option value="">是</option>
+                    <option value="">否</option>
+                  </select>
+                </p>
+              </li>
+            </ul>
+          </div>
+          <!-- 子通道列表 -->
+          <div class="fa-sub-box-wrap">
+            <div class="fa-sub-box">
+              <h3>子通道列表 <a href="javascript:;" class="btn btn-warn">添加</a></h3>
+              <table  width="100%">
+                <thead>
+                  <tr>
+                    <th>通道名称</th>
+                    <th>类型</th>
+                    <th>成本费率</th>
+                    <th>默认费率</th>
+                    <th>限额最低</th>
+                    <th>限额最高</th>
+                    <th>*包名</th>
+                    <th>是否启用</th>
+                    <th>操作</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <input type="text" class="ipt" placeholder="支付宝扫码">
+                    </td>
+                    <td>
+                      <select class="sel" name="">
+                        <option value="">zfbscan(支付宝扫码)</option>
+                        <option value="">zfbh5(支付宝H5)</option>
+                      </select>
+                    </td>
+                    <td><input type="text" class="ipt" placeholder="0.02"></td>
+                    <td><input type="text" class="ipt" placeholder="0.02"></td>
+                    <td><input type="text" class="ipt" placeholder="100"></td>
+                    <td><input type="text" class="ipt" placeholder="5000"></td>
+                    <td>
+                      <input type="text" class="ipt" placeholder="masang.zfb.scan">
+                    </td>
+                    <td>
+                      <select class="sel" name="">
+                        <option value="">启用</option>
+                        <option value="">禁用</option>
+                      </select>
+                    </td>
+                    <td>
+                      <span class="state error">无法操作</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- //子通道列表 -->
+          <!-- 按钮栏 -->
+          <div class="footer-group">
+            <a href="javascript:;" class="btn btn-primary">保存</a>
+            <a href="javascript:history.go(-1)" class="btn btn-default">返回</a>
+          </div>
+          <!-- //按钮栏 -->
+        </div>
+        <!-- //编辑 -->
+
+    </div>
+    <div class="blank02"></div>
+
+  </div>
+</div>
+</body>
+</html>
+<script src="component-header.js"></script>
+<script src="component-aside.js"></script>
+<script type="text/javascript">
+// vue实例
+var app = new Vue({
+  el: '#riches',
+  components: {
+    headerComp: HeaderComp,
+    asideComp: AsideComp
+  },
+  data: {
+
+  },
+  methods:{
+
+  },
+  created: function(){
+
+	}
+})
+</script>

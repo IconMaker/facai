@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title></title>
+<link rel="stylesheet" href="stylesheets/facai.css" />
+<link rel="stylesheet" href="stylesheets/media.css" />
+<script src="javascripts/vue.js"></script>
+<script src="javascripts/jquery-3.2.1.min.js"></script>
+</head>
+<body class="bd">
+<div id="riches">
+  <!-- 侧边菜单 -->
+  <aside-comp></aside-comp>
+  <!-- //侧边菜单 -->
+  <div class="container">
+    <!-- header -->
+    <header-comp></header-comp>
+    <!-- //header -->
+    <div class="main">
+      <h1 class="title">通道列表 <span>通道列表</span></h1>
+      <div class="f-box">
+        <div class="toolbar">
+          <a href="javascript:;" class="btn btn-primary">新增通道</a>
+        </div>
+        <h2 class="sub-title">
+          通道列表
+        </h2>
+        <!-- 列表 -->
+        <div class="list">
+          <table  width="100%">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>通道名称</th>
+                <th>子通道</th>
+                <th>是否使用</th>
+                <th>新增时间</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>603873</td>
+                <td>云贝</td>
+                <td>
+                  <p>
+                    <span class="state error">禁用</span>
+                    支付宝扫码(zfbscan)默认费率: 0.02
+                  </p>
+                  <p>
+                    <span class="state error">禁用</span>
+                    支付宝扫码H5(zfbh5)默认费率: 0.02
+                  </p>
+                </td>
+                <td>
+                  <span class="state success">禁用</span>
+                </td>
+                <td>
+                  2018-09-22 03:30:20
+                </td>
+                <td>
+                  <a href="/passage-edit.html"  class="btn btn-primary">编辑</a>
+                  <a href="javascript:;" class="btn btn-success">启用</a>
+                  <a href="javascript:;" class="btn btn-error">删除</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- //列表 -->
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+<script src="component-header.js"></script>
+<script src="component-aside.js"></script>
+<script type="text/javascript">
+// vue实例
+var app = new Vue({
+  el: '#riches',
+  components: {
+    headerComp: HeaderComp,
+    asideComp: AsideComp
+  },
+  data: {
+
+  },
+  methods: {
+
+  },
+  created: function(){
+
+	}
+})
+</script>

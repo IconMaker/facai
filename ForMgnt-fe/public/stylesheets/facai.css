@@ -236,6 +236,18 @@ h2.sub-title{
   font-weight: normal;
   padding-bottom:  5px;
 }
+h2.sub-title a{
+  float: right;
+}
+h2.sub-title::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+h2.sub-title.b-line{
+  border-bottom: 1px solid  #eee;
+}
+
 /* form */
 .f-box{
   background-color: #fff;
@@ -243,6 +255,11 @@ h2.sub-title{
   padding: 10px;
   position: relative;
 }
+.f-box-footer{
+  border-top: 1px solid  #eee;
+  padding-top: 10px;
+}
+
 .ipt,
 .date,
 .sel{
@@ -254,6 +271,9 @@ h2.sub-title{
 .ipt{
   padding-top: 6px;
   padding-bottom: 6px;
+}
+.ipt.ipt-sm{
+  width: 100px;
 }
 /* 搜索 */
 .search-box th,
@@ -348,6 +368,7 @@ h2.sub-title{
   padding: 2px 3px;
   color: #fff;
   text-align: center;
+  font-size:  12px;
   border-radius: 3px;
 }
 .state.todo{
@@ -359,6 +380,9 @@ h2.sub-title{
 .state.ing{
   background-color: #CAD8DB;
   color: #333;
+}
+.state.error{
+  background-color: #DD4A38;
 }
 
 /* button */
@@ -577,4 +601,40 @@ h2.sub-title{
 }
 .fa-card .fa-card-body{
   padding: 5px 10px;
+}
+
+/* 子表格 */
+.fa-sub-box-wrap{
+  padding-top: 10px;
+  padding-left: 132px;
+}
+.fa-sub-box{
+  background-color: #fff;
+  border: 1px solid  #eee;
+  border-top: 2px solid  #CFD3DC;
+}
+.fa-sub-box h3{
+  padding: 5px 10px;
+}
+.fa-sub-box h3::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.fa-sub-box h3 a{
+  float: right;
+}
+.fa-sub-box th,
+.fa-sub-box td{
+  border: 1px solid  #eee;
+  padding: 5px 10px;
+}
+.fa-sub-box th{
+  background-color: #F9F9F9;
+}
+.badge{
+  background-color: #DE4A38;
+  border-radius: 10px;
+  color: #fff;
+  padding: 0 5px;
 }

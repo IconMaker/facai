@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title></title>
+<link rel="stylesheet" href="stylesheets/facai.css" />
+<link rel="stylesheet" href="stylesheets/media.css" />
+<script src="javascripts/vue.js"></script>
+<script src="javascripts/jquery-3.2.1.min.js"></script>
+</head>
+<body class="bd">
+<div id="riches">
+  <!-- 侧边菜单 -->
+  <aside-comp></aside-comp>
+  <!-- //侧边菜单 -->
+  <div class="container">
+    <!-- header -->
+    <header-comp></header-comp>
+    <!-- //header -->
+    <div class="main">
+      <h1 class="title">通道池管理 <span>通道池管理</span></h1>
+      <div class="f-box">
+        <h2 class="sub-title">
+          通道池管理
+        </h2>
+        <!-- 列表 -->
+        <div class="list">
+          <table  width="100%">
+            <thead>
+              <tr>
+                <th>通道类型</th>
+                <th>上游名称</th>
+                <th>限额</th>
+                <th>权重</th>
+                <th>总金额</th>
+                <th>成功率</th>
+                <th>今日成功率</th>
+                <th>30分钟成功率</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>微信H5</td>
+                <td>酷宝享</td>
+                <td>100-3000</td>
+                <td><span class="badge">10</span></td>
+                <td>100,1000</td>
+                <td>15.08%</td>
+                <td>0%</td>
+                <td>1%</td>
+                <td>
+                  <a href="merchant-edit.html"  class="btn btn-success">重设权重</a>
+                  <a href="merchant-edit.html"  class="btn btn-success">开启通道</a>
+                </td>
+              </tr>
+              <tr>
+                <td>支付宝H5</td>
+                <td>易融通</td>
+                <td>100-3000</td>
+                <td><span class="badge">10</span></td>
+                <td>100,1000</td>
+                <td>15.08%</td>
+                <td>0%</td>
+                <td>1%</td>
+                <td>
+                  <a href="merchant-edit.html"  class="btn btn-success">重设权重</a>
+                  <a href="merchant-edit.html"  class="btn btn-success">开启通道</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- //列表 -->
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+<script src="component-header.js"></script>
+<script src="component-aside.js"></script>
+<script type="text/javascript">
+// vue实例
+var app = new Vue({
+  el: '#riches',
+  components: {
+    headerComp: HeaderComp,
+    asideComp: AsideComp
+  },
+  data: {
+
+  },
+  methods: {
+
+  },
+  created: function(){
+
+	}
+})
+</script>
