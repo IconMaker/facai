@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no" />
+<title></title>
+<link rel="stylesheet" href="stylesheets/facai.css" />
+<link rel="stylesheet" href="stylesheets/media.css" />
+<script src="javascripts/vue.js"></script>
+<script src="javascripts/jquery-3.2.1.min.js"></script>
+</head>
+<body class="bd">
+<div id="riches">
+  <!-- 侧边菜单 -->
+  <aside-comp></aside-comp>
+  <!-- //侧边菜单 -->
+  <div class="container">
+    <!-- header -->
+    <header-comp></header-comp>
+    <!-- //header -->
+    <div class="main">
+      <h1 class="title">系统设置 <span>系统设置</span></h1>
+      <div class="f-box">
+        <h2 class="sub-title b-line">系统设置（一分钟左右生效）</h2>
+        <!-- 编辑 -->
+        <div class="edit-form-wrap">
+          <div class="edit-form">
+            <ul>
+              <li>
+                <span>网站域名<b>：</b></span>
+                <p><input type="text" class="ipt" placeholder="http://www.666gou.com"></p>
+              </li>
+              <li>
+                <span>网站名称<b>：</b></span>
+                <p><input type="text" class="ipt" placeholder="创富"></p>
+              </li>
+              <li>
+                <span>提现手续费<b>：</b></span>
+                <p><input type="text" class="ipt" placeholder="5"></p>
+              </li>
+              <li>
+                <span>允许提现时间段<b>：</b></span>
+                <p><input type="date" class="date"></p>
+                <label> ---</label>
+                <p><input type="date" class="date"></p>
+              </li>
+              <li>
+                <span>短信通知手机<b>：</b></span>
+                <p><input type="text" class="ipt" placeholder=""></p>
+              </li>
+              <li>
+                <span>通道自动模式<b>：</b></span>
+                <p><a href="javascript:;" class="btn btn-primary">开启</a></p>
+              </li>
+              <li>
+                <span>通道ip模式<b>：</b></span>
+                <p><a href="javascript:;" class="btn btn-primary">开启</a></p>
+              </li>
+              <li>
+                <span>浏览控制模式<b>：</b></span>
+                <p><a href="javascript:;" class="btn btn-primary">开启</a></p>
+              </li>
+              <li>
+                <span>商户登录ip限制<b>：</b></span>
+                <p><a href="javascript:;" class="btn btn-primary">开启</a></p>
+              </li>
+              <li>
+                <span>ip黑名单<b>：</b></span>
+                <p>
+                  <textarea name="name" rows="5" class="texta"></textarea>
+                </p>
+              </li>
+              <li>
+                <span>ip白名单<b>：</b></span>
+                <p>
+                  <textarea name="name" rows="5" class="texta"></textarea>
+                </p>
+              </li>
+            </ul>
+          </div>
+          <!-- 按钮栏 -->
+          <div class="footer-group">
+            <a href="javascript:;" class="btn btn-primary">保存</a>
+          </div>
+          <!-- //按钮栏 -->
+        </div>
+        <!-- //编辑 -->
+
+    </div>
+    <div class="blank02"></div>
+
+  </div>
+</div>
+</body>
+</html>
+<script src="component-header.js"></script>
+<script src="component-aside.js"></script>
+<script type="text/javascript">
+// vue实例
+var app = new Vue({
+  el: '#riches',
+  components: {
+    headerComp: HeaderComp,
+    asideComp: AsideComp
+  },
+  data: {
+
+  },
+  methods:{
+
+  },
+  created: function(){
+
+	}
+})
+</script>

@@ -22,52 +22,52 @@
     <header-comp></header-comp>
     <!-- //header -->
     <div class="main">
-      <h1 class="title">通道列表 <span>通道列表</span></h1>
+      <h1 class="title">流水记录 <span>流水记录</span></h1>
       <div class="f-box">
-        <div class="toolbar">
-          <a href="javascript:;" class="btn btn-primary">新增通道</a>
+        <h2 class="sub-title">流水记录</h2>
+        <!-- 搜索 -->
+        <div class="search-box">
+          <div class="form-flex fx2">
+            <ul>
+              <li>
+                <input type="date" class="date">
+              </li>
+              <li>
+                <a href="javascript:;" class="btn-so">搜索</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <h2 class="sub-title">
-          通道列表
-        </h2>
+        <!-- //搜索 -->
         <!-- 列表 -->
         <div class="list">
           <table  width="100%">
             <thead>
               <tr>
-                <th>ID</th>
                 <th>通道名称</th>
-                <th>子通道</th>
-                <th>是否使用</th>
-                <th>新增时间</th>
-                <th>操作</th>
+                <th>当日入金</th>
+                <th>手续费</th>
+                <th>实际入金</th>
+                <th>当日提现</th>
+                <th>提现笔数</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>603873</td>
-                <td>云贝</td>
-                <td>
-                  <p>
-                    <span class="state error">禁用</span>
-                    支付宝扫码(zfbscan)默认费率: 0.02
-                  </p>
-                  <p>
-                    <span class="state error">禁用</span>
-                    支付宝扫码H5(zfbh5)默认费率: 0.02
-                  </p>
-                </td>
-                <td>
-                  <span class="state success">禁用</span>
-                </td>
-                <td>
-                  2018-09-22 03:30:20
-                </td>
-                <td>
-                  <a href="/passage-edit.html?active=passage"  class="btn btn-primary">编辑</a>
-                  <a href="javascript:;" class="btn btn-success">启用</a>
-                  <a href="javascript:;" class="btn btn-error">删除</a>
-                </td>
+                <td>马上付</td>
+                <td>100</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>易融通</td>
+                <td>100</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
               </tr>
             </tbody>
           </table>

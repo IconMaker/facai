@@ -41,8 +41,9 @@ var AsideComp = {
           <a href="/passage-test.html?active=test"  v-bind:class="[active == 'test' ? 'curr' : '']">通道测试</a>
           <a href="javascript:;">流量模型</a>
           <a href="/upstream-pay.html?active=pay"  v-bind:class="[active == 'pay' ? 'curr' : '']">上游代付</a>
-          <a href="javascript:;">流水查询</a>
+          <a href="/statement.html?active=statement"  v-bind:class="[active == 'statement' ? 'curr' : '']">流水查询</a>
           <a href="javascript:;">风控模型</a>
+          <a href="/setting.html?active=setting"  v-bind:class="[active == 'setting' ? 'curr' : '']">系统设置</a>
         </div>
       </div>
     </div>
