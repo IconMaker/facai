@@ -11,6 +11,13 @@
 <link rel="stylesheet" href="stylesheets/media.css" />
 <script src="javascripts/vue.js"></script>
 <script src="javascripts/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+  // 模拟横向宽度
+  var listContentWidth = $("#order-list")[0].scrollWidth + 50
+  $(".simulate > div").css({"width" : listContentWidth + "px"})
+})
+</script>
 </head>
 <body class="bd">
 <div id="riches">
@@ -25,6 +32,16 @@
       <h1 class="title">订单列表 <span>订单列表</span></h1>
       <div class="f-box">
         <h2 class="sub-title">订单列表</h2>
+        <!-- test -->
+        <ul>
+          <li v-for="item in order">
+            <label>{{ item.id }}</label>
+            <em>{{ item.name }}</em>
+            <em>{{ item.date }}</em>
+            <em>{{ item.amount }}</em>
+          </li>
+        </ul>
+        <!-- test -->
         <!-- 搜索 -->
         <div class="search-box">
           <div class="form-flex">
@@ -103,7 +120,7 @@
         </div>
         <!-- //统计 -->
         <!-- 列表 -->
-        <div class="list">
+        <div class="list" id="order-list">
           <table  width="100%">
             <thead>
               <tr>
@@ -185,10 +202,99 @@
                   <a href="javascript:;" class="btn btn-primary">通知</a>
                 </td>
               </tr>
+              </tr>
+              <tr>
+                <td>21398</td>
+                <td>23478<br>ST2018029616</td>
+                <td>ST35454687843546873519c</td>
+                <td>20953ls8jljlkj80935</td>
+                <td>3000</td>
+                <td>3000</td>
+                <td>2000</td>
+                <td>1000</td>
+                <td>100</td>
+                <td>支付宝扫码<br>【马上付】</td>
+                <td>下单成功，用户未支付<br>[120.293.38.200]</td>
+                <td>2018-09-22 09:09:17</td>
+                <td><span class="state todo">未支付</span></td>
+                <td><span class="state todo">未通知</span></td>
+                <td>
+                  <a href="javascript:;"  class="btn btn-primary">补单</a>
+                  <a href="javascript:;" class="btn btn-primary">通知</a>
+                </td>
+              </tr>
+              </tr>
+              <tr>
+                <td>21398</td>
+                <td>23478<br>ST2018029616</td>
+                <td>ST35454687843546873519c</td>
+                <td>20953ls8jljlkj80935</td>
+                <td>3000</td>
+                <td>3000</td>
+                <td>2000</td>
+                <td>1000</td>
+                <td>100</td>
+                <td>支付宝扫码<br>【马上付】</td>
+                <td>下单成功，用户未支付<br>[120.293.38.200]</td>
+                <td>2018-09-22 09:09:17</td>
+                <td><span class="state todo">未支付</span></td>
+                <td><span class="state todo">未通知</span></td>
+                <td>
+                  <a href="javascript:;"  class="btn btn-primary">补单</a>
+                  <a href="javascript:;" class="btn btn-primary">通知</a>
+                </td>
+              </tr>
+              </tr>
+              <tr>
+                <td>21398</td>
+                <td>23478<br>ST2018029616</td>
+                <td>ST35454687843546873519c</td>
+                <td>20953ls8jljlkj80935</td>
+                <td>3000</td>
+                <td>3000</td>
+                <td>2000</td>
+                <td>1000</td>
+                <td>100</td>
+                <td>支付宝扫码<br>【马上付】</td>
+                <td>下单成功，用户未支付<br>[120.293.38.200]</td>
+                <td>2018-09-22 09:09:17</td>
+                <td><span class="state todo">未支付</span></td>
+                <td><span class="state todo">未通知</span></td>
+                <td>
+                  <a href="javascript:;"  class="btn btn-primary">补单</a>
+                  <a href="javascript:;" class="btn btn-primary">通知</a>
+                </td>
+              </tr>
+              </tr>
+              <tr>
+                <td>21398</td>
+                <td>23478<br>ST2018029616</td>
+                <td>ST35454687843546873519c</td>
+                <td>20953ls8jljlkj80935</td>
+                <td>3000</td>
+                <td>3000</td>
+                <td>2000</td>
+                <td>1000</td>
+                <td>100</td>
+                <td>支付宝扫码<br>【马上付】</td>
+                <td>下单成功，用户未支付<br>[120.293.38.200]</td>
+                <td>2018-09-22 09:09:17</td>
+                <td><span class="state todo">未支付</span></td>
+                <td><span class="state todo">未通知</span></td>
+                <td>
+                  <a href="javascript:;"  class="btn btn-primary">补单</a>
+                  <a href="javascript:;" class="btn btn-primary">通知</a>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
         <!-- //列表 -->
+        <!-- 模拟滚动 -->
+        <div class="simulate" @scroll="simulateScroll">
+          <div>&nbsp;</div>
+        </div>
+        <!-- //模拟滚动 -->
       </div>
     </div>
   </div>
@@ -206,13 +312,28 @@ var app = new Vue({
     asideComp: AsideComp
   },
   data: {
-
+    order: []
   },
   methods: {
-
+    // 模拟滚动
+    simulateScroll: function(event){
+      var el = $(event.target)
+      var left = el.scrollLeft()
+      $("#order-list").scrollLeft(left)
+    }
   },
   created: function(){
-
+    var _this = this;
+    // 获取列表
+    $.ajax({
+      type: "get",
+      url: "/order",
+      dataType: "json",
+      success: function(res){
+        _this.order = res.list
+        // console.log(res.list);
+      }
+    })
 	}
 })
 </script>

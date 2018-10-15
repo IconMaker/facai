@@ -284,7 +284,7 @@ h2.sub-title.b-line{
 }
 /* list */
 .list{
-  overflow: auto;
+  overflow: hidden;
 }
 .list td{
   font-size: 12px;
@@ -638,4 +638,16 @@ h2.sub-title.b-line{
   border-radius: 10px;
   color: #fff;
   padding: 0 5px;
+}
+/* 模拟滚动 */
+.simulate{
+  position: fixed;
+  bottom: 0;
+  left: 218px;
+  right: 0;
+  overflow: auto;
+  height: 42px;
+}
+.bd.show .simulate{
+  left: 0 !important;  /* 菜单缩进后调用，使弹出层居中 */
 }

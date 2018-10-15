@@ -29,7 +29,7 @@ var AsideComp = {
       <div class="menu">
         <h3>菜单</h3>
         <div>
-          <a href="/index.html?active=order"  v-bind:class="[active == 'order' ? 'curr' : '']">订单管理</a>
+          <a href="/index.html?active=order" v-bind:class="[active == 'order' ? 'curr' : '']">订单管理</a>
           <a href="/merchant.html?active=merchant"  v-bind:class="[active == 'merchant' ? 'curr' : '']">商户管理</a>
           <a href="javascript:;">商户配额</a>
           <a href="/agent.html?active=agent" v-bind:class="[active == 'agent' ? 'curr' : '']">代理管理</a>
