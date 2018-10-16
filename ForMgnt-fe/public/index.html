@@ -145,7 +145,7 @@ $(function(){
                 <td>{{ item.gateway }}</td>
                 <td>{{ item.userState }}</td>
                 <td>{{ item.pushTime }}</td>
-                <td><span class="state success">{{ item.orderState }}</span></td>
+                <td><span v-bind:class="['state', item.orderState == '已支付' ? 'success' : 'todo']">{{ item.orderState }}</span></td>
                 <td>{{ item.noticeState }}</td>
                 <td>
                   <a href="javascript:;"  class="btn btn-warn">补单</a>
@@ -179,6 +179,7 @@ var app = new Vue({
   },
   data: {
     list: [],
+    flag: true
   },
   methods: {
     // 模拟滚动
