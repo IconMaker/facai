@@ -193,7 +193,7 @@ var app = new Vue({
     // 获取列表
     $.ajax({
       type: "get",
-      url: "http://rap2api.taobao.org/app/mock/94588/order",
+      url: "data/order.json",
       dataType: "json",
       success: function(res){
         _this.list = res.list
