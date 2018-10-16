@@ -195,8 +195,6 @@ var app = new Vue({
     $.ajax({
       type: "get",
       url: "https://rap2api.taobao.org/app/mock/94588/order",
-      dataType: "jsonp",
-      jsonp: 'jsoncallback',
       success: function(res){
         _this.list = res.list
         console.log(res);
