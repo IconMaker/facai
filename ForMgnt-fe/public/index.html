@@ -2,6 +2,7 @@
 <html lang="zh-cn">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="mobile-web-app-capable" content="yes">
@@ -193,7 +194,7 @@ var app = new Vue({
     // 获取列表
     $.ajax({
       type: "get",
-      url: "http://rap2api.taobao.org/app/mock/94588/order",
+      url: "https://rap2api.taobao.org/app/mock/94588/order",
       dataType: "jsonp",
       jsonp: 'jsoncallback',
       success: function(res){
