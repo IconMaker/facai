@@ -298,6 +298,9 @@ h2.sub-title.b-line{
 .list tr:nth-child(2n){
   background-color: #F9F9F9;
 }
+.list tr:hover{
+  background-color: rgb(238, 242, 247);
+}
 
 /* flex */
 .form-flex ul{
