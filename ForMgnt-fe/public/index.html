@@ -187,20 +187,25 @@ var app = new Vue({
     }
   },
   created: function(){
+    var url2 = "https://raw.githubusercontent.com/Microsoft/TypeScript/master/package.json";
+    $.getJSON(url2+"?callback=?", function (result1){
+      console.log(result1.length);
+    });
+
     var _this = this;
     // 获取列表
-    $.ajax({
-      type: "get",
-      url: "https://api.github.com/orgs/IBMPredictiveAnalytics/repos",
-      dataType: "json",
-      success: function(res){
-        _this.list = res.list
-        console.log(res);
-        // 模拟横向宽度
-        var listContentWidth = $("#order-list")[0].scrollWidth + 50
-        $(".simulate > div").css({"width" : listContentWidth + "px"})
-      }
-    })
+    // $.ajax({
+    //   type: "get",
+    //   url: "https://api.github.com/orgs/IBMPredictiveAnalytics/repos",
+    //   dataType: "json",
+    //   success: function(res){
+    //     _this.list = res.list
+    //     console.log(res);
+    //     // 模拟横向宽度
+    //     var listContentWidth = $("#order-list")[0].scrollWidth + 50
+    //     $(".simulate > div").css({"width" : listContentWidth + "px"})
+    //   }
+    // })
 
 	}
 })
