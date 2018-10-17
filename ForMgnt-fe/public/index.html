@@ -13,9 +13,7 @@
 <script src="javascripts/jquery-3.2.1.min.js"></script>
 <script type="text/javascript">
 $(function(){
-  // 模拟横向宽度
-  var listContentWidth = $("#order-list")[0].scrollWidth + 50
-  $(".simulate > div").css({"width" : listContentWidth + "px"})
+
 })
 </script>
 </head>
@@ -194,10 +192,14 @@ var app = new Vue({
     $.ajax({
       type: "get",
       url: "http://rap2api.taobao.org/app/mock/94588/order",
-      dataType: "json",
+      dataType: "jsonp",
+      jsonp: "callback",
       success: function(res){
         _this.list = res.list
-        console.log(res);
+
+        // 模拟横向宽度
+        var listContentWidth = $("#order-list")[0].scrollWidth + 50
+        $(".simulate > div").css({"width" : listContentWidth + "px"})
       }
     })
 	}
