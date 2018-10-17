@@ -191,11 +191,11 @@ var app = new Vue({
     // 获取列表
     $.ajax({
       type: "get",
-      url: "http://rap2api.taobao.org/app/mock/data/497897?callback=?",
+      url: "https://api.github.com/orgs/IBMPredictiveAnalytics/repos",
       dataType: "json",
       success: function(res){
         _this.list = res.list
-
+        console.log(res);
         // 模拟横向宽度
         var listContentWidth = $("#order-list")[0].scrollWidth + 50
         $(".simulate > div").css({"width" : listContentWidth + "px"})
