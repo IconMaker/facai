@@ -192,7 +192,7 @@ var app = new Vue({
     // 获取列表
     $.ajax({
       type: "get",
-      url: "https://raw.githubusercontent.com/Microsoft/TypeScript/master/package.json",
+      url: "https://api.github.com/orgs/IBMPredictiveAnalytics/repos",
       dataType: "json",
       success: function(res){
         // _this.list = res.list
