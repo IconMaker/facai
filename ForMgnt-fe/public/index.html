@@ -192,10 +192,10 @@ var app = new Vue({
     // 获取列表
     $.ajax({
       type: "get",
-      url: "https://easy-mock.com/mock/5bc6cc10d50e8869d9d12dc0/example/mock",
+      url: "https://easy-mock.com/mock/5bc6cc10d50e8869d9d12dc0/example/order",
       dataType: "json",
       success: function(res){
-        // _this.list = res.list
+        _this.list = res.list
         console.log(res);
         // 模拟横向宽度
         // var listContentWidth = $("#order-list")[0].scrollWidth + 50
