@@ -85,6 +85,10 @@ td,th {
 em, h3 {
   font: inherit;
 }
+[v-cloak]{
+  display: none !important;
+}
+
 .bd{
   background-color: #EDF1F5;
   padding-left:218px;

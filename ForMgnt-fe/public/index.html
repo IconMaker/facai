@@ -31,7 +31,7 @@ $(function(){
       <div class="f-box">
         <h2 class="sub-title">订单列表</h2>
         <!-- 搜索 -->
-        <div class="search-box">
+        <!-- <div class="search-box">
           <div class="form-flex">
             <ul>
               <li>
@@ -92,10 +92,11 @@ $(function(){
               </li>
             </ul>
           </div>
-        </div>
+        </div> -->
         <!-- //搜索 -->
+
         <!-- 统计 -->
-        <div class="total">
+        <!-- <div class="total">
           <ul>
             <li class="t01">提交金额：1000元</li>
             <li class="t02">支付金额：1000元</li>
@@ -105,8 +106,9 @@ $(function(){
             <li class="t06">订单笔数：1233笔</li>
             <li class="t07">成功率：100%</li>
           </ul>
-        </div>
+        </div> -->
         <!-- //统计 -->
+
         <!-- 列表 -->
         <div class="list" id="order-list">
           <table  width="100%">
@@ -130,8 +132,10 @@ $(function(){
               </tr>
             </thead>
             <tbody>
-              <tr v-for="item in list">
-                <td>{{ item.id }}</td>
+              <tr v-for="(item,index) in list" v-cloak>
+                <td>
+                  <a :href="'./query.html?vid=' + index">{{  item.id }}</a>
+                </td>
                 <td>{{ item.merchantNumber }}</td>
                 <td>{{ item.PlatformODN }}</td>
                 <td>{{ item.merchantODN }}</td>
