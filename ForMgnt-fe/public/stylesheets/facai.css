@@ -297,7 +297,7 @@ h2.sub-title.b-line{
 .list th,
 .list td{
   padding: 5px 10px;
-  border: 1px solid  #F8E6E9;
+  border: 1px solid  #e6e7e9;
 }
 .list tr:nth-child(2n){
   background-color: #F9F9F9;
@@ -676,7 +676,7 @@ h2.sub-title.b-line{
   padding: 6px 12px;
   line-height: 1.42857143;
   text-decoration: none;
-  border: 1px solid #ccc;
+  border: 1px solid #e6e7e9;
   background-color: #fff;
   margin-left: -1px;
   cursor: pointer;
