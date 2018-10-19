@@ -25,89 +25,101 @@
 </head>
 <body class="bd">
 <div id="riches">
-  <div class="main">
-    <h1 class="title">订单管理 <span>订单详情</span> <a href="javascript:history.go(-1)" class="c01">← 返回上一级</a></h1>
-    <div class="f-box">
-      <h2 class="sub-title">订单详情</h2>
-      <!-- 编辑 -->
-      <div class="edit-form-wrap">
-        <div class="edit-form">
-          <ul>
-            <li>
-              <span>订单id<b>：</b></span>
-              <p>{{view.id}}</p>
-            </li>
-            <li>
-              <span>商户号<b>：</b></span>
-              <p>{{view.merchantNumber}}</p>
-            </li>
-            <li>
-              <span>平台订单号<b>：</b></span>
-              <p>{{view.PlatformODN}}</p>
-            </li>
-            <li>
-              <span>商户订单号<b>：</b></span>
-              <p>{{view.merchantODN}}</p>
-            </li>
-            <li>
-              <span>订单金额<b>：</b></span>
-              <p>{{view.orderAmount}}</p>
-            </li>
-            <li>
-              <span>实付金额<b>：</b></span>
-              <p>{{view.payAmount}}</p>
-            </li>
-            <li>
-              <span>商户收入<b>：</b></span>
-              <p>{{view.merchantIncome}}</p>
-            </li>
-            <li>
-              <span>代理收入<b>：</b></span>
-              <p>{{view.agentIncome}}</p>
-            </li>
-            <li>
-              <span>平台收入<b>：</b></span>
-              <p>{{view.platformIncome}}</p>
-            </li>
-            <li>
-              <span>网关<b>：</b></span>
-              <p>{{view.gateway}}</p>
-            </li>
-            <li>
-              <span>用户状态<b>：</b></span>
-              <p>{{view.userState}}</p>
-            </li>
-            <li>
-              <span>提交时间<b>：</b></span>
-              <p>{{view.pushTime}}</p>
-            </li>
-            <li>
-              <span>订单状态<b>：</b></span>
-              <p>{{view.orderState}}</p>
-            </li>
-            <li>
-              <span>通知状态<b>：</b></span>
-              <p>{{view.noticeState}}</p>
-            </li>
-          </ul>
+  <!-- 侧边菜单 -->
+  <aside-comp></aside-comp>
+  <!-- //侧边菜单 -->
+  <div class="container">
+    <!-- header -->
+    <header-comp></header-comp>
+    <!-- //header -->
+    <div class="main">
+      <h1 class="title">订单列表 <span>订单列表</span></h1>
+      <div class="f-box">
+        <h2 class="sub-title">订单列表</h2>
+        <!-- 编辑 -->
+        <div class="edit-form-wrap">
+          <div class="edit-form">
+            <ul>
+              <li>
+                <span>订单id<b>：</b></span>
+                <p>{{view.id}}</p>
+              </li>
+              <li>
+                <span>商户号<b>：</b></span>
+                <p>{{view.merchantNumber}}</p>
+              </li>
+              <li>
+                <span>平台订单号<b>：</b></span>
+                <p>{{view.PlatformODN}}</p>
+              </li>
+              <li>
+                <span>商户订单号<b>：</b></span>
+                <p>{{view.merchantODN}}</p>
+              </li>
+              <li>
+                <span>订单金额<b>：</b></span>
+                <p>{{view.orderAmount}}</p>
+              </li>
+              <li>
+                <span>实付金额<b>：</b></span>
+                <p>{{view.payAmount}}</p>
+              </li>
+              <li>
+                <span>商户收入<b>：</b></span>
+                <p>{{view.merchantIncome}}</p>
+              </li>
+              <li>
+                <span>代理收入<b>：</b></span>
+                <p>{{view.agentIncome}}</p>
+              </li>
+              <li>
+                <span>平台收入<b>：</b></span>
+                <p>{{view.platformIncome}}</p>
+              </li>
+              <li>
+                <span>网关<b>：</b></span>
+                <p>{{view.gateway}}</p>
+              </li>
+              <li>
+                <span>用户状态<b>：</b></span>
+                <p>{{view.userState}}</p>
+              </li>
+              <li>
+                <span>提交时间<b>：</b></span>
+                <p>{{view.pushTime}}</p>
+              </li>
+              <li>
+                <span>订单状态<b>：</b></span>
+                <p>{{view.orderState}}</p>
+              </li>
+              <li>
+                <span>通知状态<b>：</b></span>
+                <p>{{view.noticeState}}</p>
+              </li>
+            </ul>
+          </div>
+          <!-- 按钮栏 -->
+          <div class="footer-group">
+            <a href="javascript:history.go(-1)" class="btn btn-default">返回</a>
+          </div>
+          <!-- //按钮栏 -->
         </div>
-        <!-- 按钮栏 -->
-        <div class="footer-group">
-          <a href="javascript:history.go(-1)" class="btn btn-default">返回</a>
-        </div>
-        <!-- //按钮栏 -->
+        <!-- //编辑 -->
+
       </div>
-      <!-- //编辑 -->
     </div>
   </div>
 </div>
 </body>
 </html>
-
+<script src="component-header.js"></script>
+<script src="component-aside.js"></script>
 <script type="text/javascript">
 var vm = new Vue({
   el: '#riches',
   components: {
+    headerComp: HeaderComp,
+    asideComp: AsideComp,
   },
   data: {
     vid: "",

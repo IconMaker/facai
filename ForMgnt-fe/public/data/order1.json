@@ -1,0 +1,30 @@
+{
+  _req: function({
+    _req
+  }) {
+    return _req
+  },
+  view: function({
+    _req
+  }) {
+    var vid = _req.query.vid
+    return this.list[vid]
+  },
+  "list|3-10": [{
+    "id|1000-10000": 1,
+    "merchantNumber": /MNAME[0-9]{5}/,
+    "PlatformODN": /PODN[0-9]{8}/,
+    "merchantODN": /MODN[0-9]{8}/,
+    "orderAmount|1000-100000": 10000,
+    "payAmount|1000-10000": 10000,
+    "merchantIncome|1000-10000": 10000,
+    "agentIncome|1000-10000": 1000,
+    "platformIncome|1000-10000": 1,
+    "gateway|1": ["支付宝扫码", "微信扫码"],
+    "userState|1": ["下单成功，用户未支付  [120.213.38.200]", "下单成功，已支付  [192.253.138.100]"],
+    "pushTime": "@now('yyyy-MM-dd HH:mm:ss')",
+    "orderState|1": ["已支付", "未支付"],
+    "noticeState|1": ["已通知", "未通知"],
+    "var": "@gateway =="
+  }]
+}

@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var Mock = require('mockjs')
-var order = require('../public/data/order.json')
+// var order = require('../public/data/order.json')
 
 //统一返回格式用 router.use
 var responseData

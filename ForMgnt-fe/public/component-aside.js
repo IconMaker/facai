@@ -17,7 +17,7 @@ var AsideComp = {
     }
   },
   template: `<div>
-    <div class="aside" style="display:none">
+    <div class="aside">
       <div class="logo">
         <i></i>
         <span>创富后台管理系统</span>

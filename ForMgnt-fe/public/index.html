@@ -31,7 +31,7 @@ $(function(){
       <div class="f-box">
         <h2 class="sub-title">订单列表</h2>
         <!-- 搜索 -->
-        <!-- <div class="search-box">
+        <div class="search-box">
           <div class="form-flex">
             <ul>
               <li>
@@ -92,11 +92,11 @@ $(function(){
               </li>
             </ul>
           </div>
-        </div> -->
+        </div>
         <!-- //搜索 -->
 
         <!-- 统计 -->
-        <!-- <div class="total">
+        <div class="total">
           <ul>
             <li class="t01">提交金额：1000元</li>
             <li class="t02">支付金额：1000元</li>
@@ -106,7 +106,7 @@ $(function(){
             <li class="t06">订单笔数：1233笔</li>
             <li class="t07">成功率：100%</li>
           </ul>
-        </div> -->
+        </div>
         <!-- //统计 -->
 
         <!-- 列表 -->
@@ -158,6 +158,9 @@ $(function(){
           </table>
         </div>
         <!-- //列表 -->
+        <!-- 翻页 -->
+        <page-comp :page-index="currentPage"  :total="count" :page-size="pageSize" @change="pageChange"></page-comp>
+        <!-- //翻页 -->
         <!-- 模拟滚动 -->
         <div class="simulate" @scroll="simulateScroll">
           <div>&nbsp;</div>
@@ -171,16 +174,21 @@ $(function(){
 </html>
 <script src="component-header.js"></script>
 <script src="component-aside.js"></script>
+<script src="page.js"></script>
 <script type="text/javascript">
 // vue实例
 var app = new Vue({
   el: '#riches',
   components: {
     headerComp: HeaderComp,
-    asideComp: AsideComp
+    asideComp: AsideComp,
+    pageComp: PageComp
   },
   data: {
     list: [],
+    pageSize : 5 , //每页显示20条数据
+    currentPage : 1, //当前页码
+    count : 0 //总记录数
   },
   methods: {
     // 模拟滚动
@@ -188,25 +196,38 @@ var app = new Vue({
       var el = $(event.target)
       var left = el.scrollLeft()
       $("#order-list").scrollLeft(left)
+    },
+    //获取数据
+    getList() {
+      var _this = this;
+      // 获取列表
+      $.ajax({
+        type: "get",
+        url: "https://easy-mock.com/mock/5bc6cc10d50e8869d9d12dc0/example/order?pageSize=" + _this.pageSize + "&currentPage=" + this.currentPage,
+        dataType: "json",
+        success: function(res){
+          _this.list = res.currentList
+          _this.count = res.count
+
+          // 等数据加载后，执行模拟横向宽度
+          setTimeout(function(){
+            var listContentWidth = $("#order-list")[0].scrollWidth + 48
+            $(".simulate > div").css({"width" : listContentWidth + "px"})
+          },10)
+        }
+      })
+    },
+
+    //从page组件传递过来的当前page
+    pageChange(page) {
+      this.currentPage = page
+      console.log(page);
+      this.getList()
     }
   },
-  created: function(){
-
-    var _this = this;
-    // 获取列表
-    $.ajax({
-      type: "get",
-      url: "https://easy-mock.com/mock/5bc6cc10d50e8869d9d12dc0/example/order",
-      dataType: "json",
-      success: function(res){
-        _this.list = res.list
-        console.log(res);
-        // 模拟横向宽度
-        // var listContentWidth = $("#order-list")[0].scrollWidth + 50
-        // $(".simulate > div").css({"width" : listContentWidth + "px"})
-      }
-    })
-
-	}
+  mounted() {
+    //请求第一页数据
+    this.getList()
+  }
 })
 </script>
