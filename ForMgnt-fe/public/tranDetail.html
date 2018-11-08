@@ -114,53 +114,59 @@ $(function(){
           <table  width="100%">
             <thead>
               <tr>
-                <th>代理ID</th>
-                <th>商户号</th>
-                <th>平台订单号</th>
-                <th>商户订单号</th>
-                <th>订单金额</th>
-                <th>实付金额</th>
-                <th>商户收入</th>
-                <th>代理收入</th>
-                <th>平台收入</th>
-                <th>网关</th>
-                <th>用户状态</th>
-                <th>提交时间</th>
-                <th>订单状态</th>
+                <th>卡号</th>
+                <th>通道ID</th>
+                <th>通道交易日期</th>
+                <th>通道商户ID</th>
+                <th>通道订单号</th>
+                <th>通道返回码</th>
+                <th>通道返回信息</th>
+                <th>通道交易时间</th>
+                <th>手续费</th>
+                <th>网关ID</th>
+                <th>撤销标识</th>
+                <th>商户ID</th>
+                <th>商户异步url</th>
                 <th>通知状态</th>
-                <th>操作</th>
+                <th>商户同步url</th>
+                <th>交易订单号</th>
+                <th>实付金额</th>
+                <th>返回码</th>
+                <th>交易金额</th>
+                <th>交易日期</th>
+                <th>交易时间</th>
+                <th>交易类型</th>
               </tr>
             </thead>
             <tbody>
               <tr v-for="(item,index) in list" v-cloak>
-                <td>
-                  <a :href="'query.html?vid=' + index">{{  item.id }}</a>
-                </td>
-                <td>{{ item.merchantNumber }}</td>
-                <td>{{ item.PlatformODN }}</td>
-                <td>{{ item.merchantODN }}</td>
-                <td>{{ item.orderAmount }}</td>
-                <td>{{ item.payAmount }}</td>
-                <td>{{ item.merchantIncome }}</td>
-                <td>{{ item.agentIncome }}</td>
-                <td>{{ item.platformIncome }}</td>
-                <td>{{ item.gateway }}</td>
-                <td>{{ item.userState }}</td>
-                <td>{{ item.pushTime }}</td>
-                <td><span v-bind:class="['state', item.orderState == '已支付' ? 'success' : 'todo']">{{ item.orderState }}</span></td>
-                <td>{{ item.noticeState }}</td>
-                <td>
-                  <a href="javascript:;"  class="btn btn-warn">补单</a>
-                  <a href="javascript:;" class="btn btn-warn">通知</a>
-                </td>
+                <td>{{ item.cardNo }}</td>
+                <td>{{ item.channelID }}</td>
+                <td>{{ item.chnlDate }}</td>
+                <td>{{ item.chnlMerchantID }}</td>
+                <td>{{ item.chnlOrderNo }}</td>
+                <td>{{ item.chnlRetCode }}</td>
+                <td>{{ item.chnlRetMsg }}</td>
+                <td>{{ item.chnlTime }}</td>
+                <td>{{ item.fee }}</td>
+                <td>{{ item.gatewayId }}</td>
+                <td>{{ item.isCancel }}</td>
+                <td>{{ item.merchantID }}</td>
+                <td>{{ item.notifyAsyncURL }}</td>
+                <td>{{ item.notifyStatus }}</td>
+                <td>{{ item.notifySyncURL }}</td>
+                <td>{{ item.orderNo }}</td>
+                <td>{{ item.realAmt }}</td>
+                <td>{{ item.retCode }}</td>
+                <td>{{ item.tranAmt }}</td>
+                <td>{{ item.tranDate }}</td>
+                <td>{{ item.tranTime }}</td>
+                <td>{{ item.tranType }}</td>
               </tr>
             </tbody>
           </table>
         </div>
         <!-- //列表 -->
-        <!-- 翻页 -->
-        <page-comp :page-index="currentPage"  :total="count" :page-size="pageSize" @change="pageChange"></page-comp>
-        <!-- //翻页 -->
         <!-- 模拟滚动 -->
         <div class="simulate" @scroll="simulateScroll">
           <div>&nbsp;</div>
@@ -174,7 +180,6 @@ $(function(){
 </html>
 <script src="component-header.js"></script>
 <script src="component-aside.js"></script>
-<script src="page.js"></script>
 <script type="text/javascript">
 // vue实例
 var app = new Vue({
@@ -182,7 +187,6 @@ var app = new Vue({
   components: {
     headerComp: HeaderComp,
     asideComp: AsideComp,
-    pageComp: PageComp
   },
   data: {
     list: [],
@@ -203,12 +207,10 @@ var app = new Vue({
       // 获取列表
       $.ajax({
         type: "get",
-        url: "https://easy-mock.com/mock/5bc6cc10d50e8869d9d12dc0/example/order?pageSize=" + _this.pageSize + "&currentPage=" + this.currentPage,
+        url: "/tranDetail/list",
         dataType: "json",
         success: function(res){
-          _this.list = res.currentList
-          _this.count = res.count
-
+          _this.list = res.list
           // 等数据加载后，执行模拟横向宽度
           setTimeout(function(){
             var listContentWidth = $("#order-list")[0].scrollWidth + 48
@@ -216,12 +218,6 @@ var app = new Vue({
           },10)
         }
       })
-    },
-
-    //从page组件传递过来的当前page
-    pageChange(page) {
-      this.currentPage = page
-      this.getList()
     }
   },
   mounted() {
